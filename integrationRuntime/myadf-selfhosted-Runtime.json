@@ -1,0 +1,12 @@
+{
+	"name": "myadf-selfhosted-Runtime",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/78b4a463-5413-4784-8e92-1c856fde160c/resourcegroups/rg_dev_DevProject/providers/Microsoft.DataFactory/factories/mydf-Dev-Migration/integrationruntimes/Selfhosted",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}

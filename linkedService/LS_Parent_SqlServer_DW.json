@@ -1,0 +1,28 @@
+{
+	"name": "LS_Parent_SqlServer_DW",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "sam\\SQL_DE_LAB",
+			"database": "dataengineer",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "sqladmin",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_sqlazurekvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "azuresqlkvaultpwd"
+			}
+		},
+		"connectVia": {
+			"referenceName": "myadf-selfhosted-Runtime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
